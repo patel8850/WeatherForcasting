@@ -7,11 +7,12 @@ import { HashRouter } from "react-router-dom"
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <HashRouter>
+   
   <WeatherProvider>
-    <App />
+     <HashRouter> 
+      <App />
+      </HashRouter>
     </WeatherProvider>
-    </HashRouter>
   </StrictMode>,
 
 )
