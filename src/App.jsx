@@ -6,7 +6,7 @@ import gif from "./assets/gif2.webp"
 function App() {
   const wheather = useWeather();
   return (
-    <div  className=" h-screen bg-cover bg-center flex flex-col items-center " style={{ backgroundImage: `url(${gif})` }}>
+    <div  className=" min-h-screen bg-cover bg-center flex flex-col items-center " style={{ backgroundImage: `url(${gif})` }}>
       <div>
         <Input value="search" />
         <Card />

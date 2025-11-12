@@ -55,7 +55,7 @@ const Card = () => {
       </div>
       
       <div className="my-8 p-8 bg-white/50 backdrop-blur-sm text-gray-800 text-xl w-full rounded-3xl shadow-lg border border-white/50">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="text-center p-4 bg-blue-50 rounded-2xl">
             <p className="text-gray-600">Feels Like</p>
             <p className="font-bold text-2xl text-blue-700">
