@@ -9,7 +9,9 @@ const Input = () => {
     const result = await getWeatherCity(weather.searchCity);
 
     if (result.error) {
-      alert(`No weather data found for "${weather.searchCity}". Please check the spelling and try again.`);
+      alert(
+        `No weather data found for "${weather.searchCity}". Please check the spelling and try again.`
+      );
     } else {
       weather.setData(result.data);
     }
@@ -17,11 +19,10 @@ const Input = () => {
 
   return (
     <div className="flex flex-wrap items-center justify-center mt-10 w-full  gap-3">
-      {/* Search Input Container */}
-      <div className="w-full sm:w-3/4 md:w-3/4 lg:w-3/4 h-12 flex bg-gray-800 rounded-2xl focus-within:border-blue-500 transition border-2">
+      <div className="mx-3 w-full sm:w-3/4 md:w-3/4 lg:w-3/4 h-11 flex bg-gray-800 rounded-2xl focus-within:border-blue-500 transition border-2">
         <img className="ml-2 mt-2 h-8 w-8" src={logo} alt="Search Icon" />
         <input
-          className="flex-1 text-lg text-white bg-transparent outline-none px-3"
+          className=" flex-1 text-[12px] sm:text-lg md:text-lg lg:text-lg text-white bg-transparent outline-none px-3"
           type="text"
           placeholder="Search any Location, City, State or Country"
           value={weather.searchCity}
@@ -29,9 +30,17 @@ const Input = () => {
         />
       </div>
 
-      {/* Search Button */}
       <button
-        className="bg-gradient-to-r from-blue-500 to-blue-700 hover:to-purple-500 text-white font-semibold py-2 px-6 rounded-xl w-full sm:w-auto h-12"
+        className="
+  mx-3 
+  bg-blue-600 hover:bg-blue-700 active:bg-blue-800 
+  text-white font-semibold 
+  py-2 px-6 rounded-xl 
+  w-full sm:w-auto h-12 
+  transition-all duration-200 ease-in-out 
+  transform active:scale-95 
+  shadow-md hover:shadow-lg
+"
         onClick={handleSearch}
       >
         Search
